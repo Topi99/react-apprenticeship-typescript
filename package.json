@@ -1,0 +1,12 @@
+{
+  "name": "typescript-sessions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "typescript": "^4.5.5"
+  }
+}
