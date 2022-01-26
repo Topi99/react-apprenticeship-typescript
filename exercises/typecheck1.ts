@@ -1,4 +1,4 @@
-type User = unknown;
+type UserTest = unknown;
 
 const users: unknown[] = [
     {
