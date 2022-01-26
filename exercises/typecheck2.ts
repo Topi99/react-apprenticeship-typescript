@@ -11,9 +11,9 @@ interface Admin {
   role: string;
 }
 
-export type Person = unknown;
+type Person = unknown;
 
-export const persons: User[] = [
+const persons: User[] = [
   {
       name: 'Max Mustermann',
       age: 25,
@@ -36,13 +36,8 @@ export const persons: User[] = [
   }
 ];
 
-export function logPerson(person: Person) {
-  let additionalInformation: string;
-  if (person.role) {
-      additionalInformation = person.role;
-  } else {
-      additionalInformation = person.occupation;
-  }
+const logPerson = (person: Person) => {
+  let additionalInformation: string; // Additional information should be role or occupation.
   console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
 }
 

@@ -13,9 +13,9 @@ const users: unknown[] = [
     }
 ];
 
-const logPerson = (user: unknown) => {
+const logPersonTest = (user: unknown) => {
     console.log(` - ${user.name}, ${user.age}`);
 }
 
 console.log('Users:');
-users.forEach(logPerson);
+users.forEach(logPersonTest);
