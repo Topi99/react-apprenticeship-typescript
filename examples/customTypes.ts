@@ -12,6 +12,7 @@ getPosition(10, -7);
 interface UserType {
   username: string;
   age: number;
+  email?: string;
 }
 
 const getInfo = (user: UserType) => {
