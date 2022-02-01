@@ -1,6 +1,10 @@
-type UserTest = unknown;
+interface IUserTest {
+    name: string;
+    age: number;
+    occupation: string;
+}
 
-const users: unknown[] = [
+const users: IUserTest[] = [
     {
         name: 'Max Mustermann',
         age: 25,
@@ -13,7 +17,7 @@ const users: unknown[] = [
     }
 ];
 
-const logPersonTest = (user: unknown) => {
+const logPersonTest = (user: IUserTest) => {
     console.log(` - ${user.name}, ${user.age}`);
 }
 

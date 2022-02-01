@@ -10,9 +10,9 @@ interface Admin {
   role: string;
 }
 
-type Person = unknown;
+type Person = User | Admin;
 
-const persons: User[] = [
+const persons: Person[] = [
   {
       name: 'Max Mustermann',
       age: 25,
@@ -36,7 +36,8 @@ const persons: User[] = [
 ];
 
 const logPerson = (person: Person) => {
-  let additionalInformation: string; // Additional information should be role or occupation.
+  let additionalInformation = 'role' in person ? person.role : person.occupation;
+
   console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
 }
 
